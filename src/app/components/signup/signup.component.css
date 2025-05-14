@@ -58,6 +58,12 @@ input[type="password"] {
   border-radius: 8px;
   font-size: 0.95rem;
 }
+input[type="text"]{
+  padding: 0.75rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 0.95rem;
+}
 
 button {
   padding: 0.75rem;
@@ -98,4 +104,30 @@ button:hover {
   color: #0469ff;
   text-decoration: none;
   background-color: #fff;
+}
+.or-text{
+    background-color: #fff;
+    color:#252525;
+}
+.google-button{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap:20px;
+}
+.google-logo{
+    width:30px;
+    height:auto;
+    border-radius: 20px;
+    background-color: #fff;
+}
+.policy-text{
+    font-size: .8rem;
+    background-color: #fff;
+    color:#252525
+}
+
+.policy-text a{
+    background-color: #fff;
+    color:#0469ff;
 }

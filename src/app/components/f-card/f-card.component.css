@@ -1,0 +1,80 @@
+/* Card Container */
+.card-container {
+    display: flex;
+    justify-content: center; /* Center the card horizontally */
+    align-items: center; /* Center the card vertically */
+    height: 100vh; /* Fill the screen */
+}
+
+/* Card layout */
+.card {
+    display: flex;
+    flex-direction: row; /* Default layout is row (logo + heading + illustration) */
+    justify-content: space-between; /* Space between text and image */
+    align-items: center; /* Align items vertically */
+    text-align: left; /* Left align the text */
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    width: 80%;
+    max-width: 900px; /* Optional: max width */
+}
+
+/* Top Section - Logo and Heading on the same line */
+.top {
+    display: flex; 
+    align-items: center; /* Align logo and heading on the same line */
+    gap: 10px; /* Space between logo and heading */
+}
+
+.logo-img {
+    width: 40px; /* Adjust logo image size */
+    height: auto;
+}
+
+.heading {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin: 0; /* Remove margin */
+}
+
+/* Description text */
+.text {
+    width: 50%; /* Text takes up 50% of the width */
+}
+
+.text p {
+    font-size: 1rem;
+    color: #555;
+}
+
+/* Image layout */
+.img img {
+    width: 100%; /* Make image responsive */
+    max-width: 400px; /* Adjust max width of the illustration */
+    height: auto;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+    .card {
+        flex-direction: column; /* Stack content vertically on small screens */
+        text-align: center; /* Center text on small screens */
+    }
+
+    .top {
+        flex-direction: column; /* Stack logo and heading on top of each other */
+        align-items: center; /* Center the logo and heading */
+    }
+
+    .text {
+        width: 100%; /* Text takes full width on mobile */
+        margin-top: 10px;
+    }
+
+    .img img {
+        width: 80%; /* Adjust image size for mobile */
+        margin-top: 20px;
+    }
+}
