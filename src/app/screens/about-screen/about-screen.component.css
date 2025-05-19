@@ -1,0 +1,83 @@
+.about-us{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+.who{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    width:80%;
+    padding-top: 6vh;
+    padding-bottom: 6vh;
+}
+.who-p{
+    padding-top: 2vh;
+}
+.mission{
+    width:100%;
+    background-color: #0469ff;
+    height:60vh;
+    
+}
+.m-h{
+    background-color: #0469ff;
+    color:#fff;
+    padding-top: 5vh;
+}
+.mission-p{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color:white;
+    text-align: center;
+    background-color: #0469ff;
+    padding-top: 13vh;
+    padding-left: 15vh;
+    padding-right: 15vh;
+    
+    font-family: poppins;
+}
+.why{
+    height: 60vh;
+}
+.w-h{
+    padding-top: 5vh;
+}
+.why-p{
+    padding-top: 13vh;
+    padding-left: 15vh;
+    padding-right: 15vh;
+}
+.cto{
+    height: 40vh;
+    padding-bottom: 5vh;
+    background-color: #0469ff;
+    width:100%;
+}
+.cto-h{
+    padding-top: 5vh;
+    color:#252525;
+    letter-spacing: 1px;
+    background-color: #0469ff;
+    color:#fff;
+    font-size: 1.7rem;
+}
+.btn{
+    margin-top: 2vh;
+    padding:15px 25px;
+    border-radius: 50px;
+    background-color: #252525;
+    color:#fff;
+    font-family: monospace;
+    font-size: 1rem;
+}
+.btn:hover{
+    background-color: black;
+    scale:1.05;
+    transition:  ease-in
+}

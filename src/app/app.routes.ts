@@ -4,6 +4,7 @@ import { AboutScreenComponent } from './screens/about-screen/about-screen.compon
 import { PricingScreenComponent } from './screens/pricing-screen/pricing-screen.component';
 import { ContactScreenComponent } from './screens/contact-screen/contact-screen.component';
 import { LoginComponent } from './components/login/login.component';
+import { SignupComponent } from './components/signup/signup.component';
 
 
 export const routes: Routes = [
@@ -11,5 +12,6 @@ export const routes: Routes = [
     {path:'about',component:AboutScreenComponent},
     {path:'pricing',component:PricingScreenComponent},
     {path:'contact',component:ContactScreenComponent},
-    {path:'login',component:LoginComponent}
+    {path:'login',component:LoginComponent},
+    {path:'signup',component:SignupComponent}
 ];
