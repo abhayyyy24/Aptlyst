@@ -1,0 +1,53 @@
+<div class="auth-wrapper" [class.signup-mode]="!isLogin">
+  <div class="card">
+    <!-- Brand Section -->
+    <div class="brand-section">
+      <img src="/logo.png" alt="Logo" />
+      <h1>Aptlyst</h1>
+    </div>
+
+    <!-- Forms Section -->
+    <div class="forms-section">
+      <!-- Login Form -->
+      <div class="form login-form">
+        <h2 class="heading">Login</h2>
+
+        <input name="emailId"[(ngModel)]="loginObj.emailId" type="email" placeholder="Email" />
+        <input name="password"[(ngModel)]="loginObj.password" type="password" placeholder="Password" />
+        <button (click)="onLogin()">Login</button>
+        <p>Don’t have an account? <span (click)="toggleForm()">Sign Up</span></p>
+      </div>
+
+      <!-- Signup Form -->
+      <div class="form signup-form">
+        <h2 class="heading">Sign Up</h2>
+        <input name="FullName" #name="ngModel" [(ngModel)]="registerObj.FullName" type="text" placeholder="Name" required />
+        <div class="validation-msg">
+          @if (name.errors?.['required']){
+            <span>This is Required.</span>
+          }
+        </div>
+        <input name="PhoneNumber" #PhoneNumber="ngModel" [(ngModel)]="registerObj.PhoneNumber" type="tel" placeholder="Phone Number" required />
+        <div class="validation-msg">
+          @if (PhoneNumber.errors?.['required']){
+            <span>This is Required.</span>
+          }
+        </div>
+        <input name="emailId" #emailId="ngModel" [(ngModel)]="registerObj.emailId" type="email" placeholder="Email" required/>
+        <div class="validation-msg">
+          @if (emailId.errors?.['required']){
+            <span>This is Required.</span>
+          }
+        </div>
+        <input name="password" #password="ngModel" [(ngModel)]="registerObj.password" type="password" placeholder="Password" required/>
+        <div class="validation-msg">
+          @if (password.errors?.['required']){
+            <span>This is Required.</span>
+          }
+        </div>
+        <button  (click)="onRegister()">Sign Up</button>
+        <p>Already have an account? <span (click)="toggleForm()">Login</span></p>
+      </div>
+    </div>
+  </div>
+</div>
