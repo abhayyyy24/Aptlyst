@@ -1,0 +1,94 @@
+.user-header-wrapper {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  margin-top: 3rem;
+}
+
+.user-header {
+  width: 80%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #ffffff;
+  padding: 1rem 1.5rem; /* slightly thinner height */
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  margin-bottom: 1.5rem;
+  outline: 1px solid #c4bebe;
+}
+
+.user-info {
+  display: flex;
+  align-items: center;
+  gap: .6rem;
+  background-color: #fff;
+}
+
+.avatar{
+  background-color: #fff;
+}
+.avatar i{
+  width: 40px;
+  height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #0469ff;
+    background-color: #f0f4ff;
+    border-radius: 50%;
+}
+
+.user-info h2 {
+  margin: 0;
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #252525;
+  background-color: #fff;
+  font-family: poppins, sans-serif;
+}
+
+.stats {
+  display: flex;
+  gap: 1rem;
+  background-color: #fff;
+  margin-right: 2rem;
+}
+
+.stat-card {
+  background: #ffffff;
+  padding: 0.6rem 1rem;
+  border-radius: 10px;
+  text-align: center;
+  min-width: 100px;
+}
+
+.stat-number {
+  font-size: 1.4rem;
+  font-weight: bold;
+  color: #0057ff;
+  background-color: #fff;
+  font-family: poppins,'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.stat-label {
+  color: #555;
+  font-size: .9rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  background-color: #fff;
+  font-family: poppins,'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.stat-label i{
+  background-color: #fff;
+  
+  scale: 1.5;
+}
+@media screen and (max-width: 768px) {
+  .user-header {
+    width: 95%;
+  }  
+}

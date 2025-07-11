@@ -1,0 +1,111 @@
+<app-toast></app-toast>
+<div class="form-container">
+  <div class="form-card">
+    <h2>Create New Listing</h2>
+    <form [formGroup]="listingForm" (ngSubmit)="onSubmit()">
+      <div class="form-grid">
+        <!-- Property Type -->
+        <div class="field">
+          <label for="type">Property Type</label>
+          <select id="type" formControlName="type" required>
+            <option value=""  >Select property type</option>
+            <option value="rk">RK</option>
+            <option value="1bhk">1 BHK</option>
+            <option value="1.5bhk">1.5 BHK</option>
+            <option value="2bhk">2 BHK</option>
+            <option value="2.5bhk">2.5 BHK</option>
+            <option value="3bhk">3 BHK</option>
+            <option value="3.5bhk">3.5 BHK</option>
+            <option value="4bhk">4 BHK</option>
+          </select>
+          <small class="error" *ngIf="listingForm.get('type')?.hasError('required') && listingForm.get('type')?.touched">
+            Property type is required
+          </small>
+        </div>
+
+        <!-- Society Name -->
+        <div class="field">
+          <label for="societyName">Society Name</label>
+          <input type="text" id="societyName" formControlName="society_name" placeholder="Enter society name"/>
+          <small class="error" *ngIf="listingForm.get('societyName')?.invalid && listingForm.get('societyName')?.touched">
+            Society name is required
+          </small>
+        </div>
+
+        <!-- Locality -->
+        <div class="field">
+          <label for="locality">Locality</label>
+          <input type="text" id="locality" formControlName="locality" placeholder="Enter locality" required/>
+          <small class="error" *ngIf="listingForm.get('locality')?.invalid && listingForm.get('locality')?.touched">
+            Locality is required
+          </small>
+        </div>
+
+        <!-- Floor -->
+        <div class="field">
+          <label for="floor">Floor</label>
+          <input type="number" id="floor" formControlName="floor" placeholder="Enter floor number" min="0" max="50"/>
+        </div>
+
+        <!-- Rent -->
+        <div class="field">
+          <label for="rent">Monthly Rent (₹)</label>
+          <input type="number" id="rent" formControlName="rent" placeholder="Enter monthly rent" min="0" required/>
+          <small class="error" *ngIf="listingForm.get('rent')?.invalid && listingForm.get('rent')?.touched">
+            Rent is required
+          </small>
+        </div>
+
+        <!-- Deposit -->
+        <div class="field">
+          <label for="deposit">Security Deposit (₹)</label>
+          <input type="number" id="deposit" formControlName="deposit" placeholder="Enter security deposit" min="0" required/>
+          <small class="error" *ngIf="listingForm.get('deposit')?.invalid && listingForm.get('deposit')?.touched">
+            Deposit is required
+          </small>
+        </div>
+
+        <!-- Carpet Area -->
+        <div class="field">
+          <label for="carpetArea">Carpet Area (sq. ft.)</label>
+          <input type="number" id="carpetArea" formControlName="carpetArea" placeholder="Enter carpet area" min="0"/>
+        </div>
+
+        <!-- Available From -->
+        <div class="field">
+          <label for="availableFrom">Available From</label>
+          <input type="date" id="availableFrom" formControlName="availableFrom" required/>
+          <small class="error" *ngIf="listingForm.get('availableFrom')?.invalid && listingForm.get('availableFrom')?.touched">
+            Available date is required
+          </small>
+        </div>
+      </div>
+
+      <!-- Action Section -->
+      <div class="action-section">
+        <!-- Upload Section -->
+        <div class="upload-section">
+          <div class="file-upload">
+            <label for="image" class="upload-btn">
+              <i class='bx bx-upload'></i> 
+              Upload Images
+            </label>
+            <input type="file" id="image" (change)="onImageUpload($event)" accept="image/*" style="display: none;"/>
+          </div>
+          <div *ngIf="selectedImage" class="selected-files">
+            <i class='bx bx-image'></i>
+            Image selected
+          </div>
+        </div>
+
+        <!-- Submit Button -->
+        <div class="submit-section">
+          <button type="submit" [disabled]="listingForm.invalid" class="submit-btn">
+            <i class='bx bx-plus'></i> 
+            Create Listing
+          </button>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>

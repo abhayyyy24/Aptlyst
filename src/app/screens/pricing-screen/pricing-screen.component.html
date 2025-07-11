@@ -1,0 +1,15 @@
+<navbar></navbar>
+<div class="cards-container">
+    <div *ngFor="let plan of pricingplans">
+        <pricingcard
+            [title]="plan.title"
+            [subtitle]="plan.subtitle"
+            [price]="plan.price"
+            [features]="plan.features"
+            [isPopular]="plan.isPopular"
+            [buttonText]="plan.buttonText"
+            [icon]="plan.icon">
+        </pricingcard>
+    </div>
+</div>
+<app-footer></app-footer>

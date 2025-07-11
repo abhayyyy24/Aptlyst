@@ -1,0 +1,136 @@
+.card {
+    background-color: #ffffff;
+    border-radius: 16px;
+    padding: 1.5rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    position: relative;
+    width: 300px;
+    border: 2px solid transparent;
+    height: 600px;
+    display: flex;
+    flex-direction: column;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.15);
+}
+
+.card.popular {
+    border-color: #0469ff;
+}
+
+.icon {
+    background-color: #0469ff;
+    color: white;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+
+h3 {
+    color: #252525;
+    font-size: 1.4rem;
+    margin: 0.5rem 0;
+    font-family: 'Poppins', sans-serif;
+    background-color: #fff;
+}
+
+.subtitle {
+    color: #666;
+    font-size: 0.85rem;
+    margin-bottom: 1.25rem;
+    background-color: #fff;
+}
+
+h1 {
+    color: #252525;
+    font-size: 2.2rem;
+    margin: 1rem 0;
+    font-family: 'Poppins', sans-serif;
+    font-weight: bold;
+    background-color: #fff;
+}
+
+h1 span {
+    font-size: 0.9rem;
+    color: #666;
+    font-weight: normal;
+    background-color: #fff;
+}
+
+.features {
+    list-style: none;
+    padding: 0;
+    margin: 1.25rem 0;
+    background-color: #fff;
+    flex-grow: 1;
+}
+
+.features li {
+    padding: 0.4rem 0;
+    color: #444;
+    display: flex;
+    align-items: center;
+    font-size: 0.9rem;
+    background-color: #fff;
+}
+
+.features li::before {
+    content: "✓";
+    color: #0469ff;
+    margin-right: 0.5rem;
+    font-weight: bold;
+}
+
+.badge {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    background-color: #0469ff;
+    color: white;
+    padding: 0.25rem 0.75rem;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 500;
+}
+
+button {
+    width: 100%;
+    padding: 0.8rem;
+    background-color: #0469ff;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 0.95rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: auto;
+}
+
+button:hover {
+    background-color: #0352cc;
+}
+
+/* Responsive adjustments */
+@media (max-width: 1200px) {
+    .card {
+        width: 260px;
+        padding: 1.25rem;
+    }
+}
+
+@media (max-width: 992px) {
+
+    .card {
+        width: 280px;
+    }
+}
+

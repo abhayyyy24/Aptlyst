@@ -1,0 +1,28 @@
+<div class="navbar">
+    <div class="nav-left">
+        <img src="/logo.png" alt="logo">
+        <p class="title">Aptlyst</p>
+    </div>
+    <!-- Mobile menu button -->
+    <button class="mobile-menu-btn" (click)="toggleMobileMenu()">
+        <i class="fas fa-bars"></i>
+    </button>
+    <!-- Desktop navigation -->
+    <div class="nav desktop-nav">
+        <a class="link" [routerLink]="['dashboard']">Dashboard</a>
+        <a class="link" [routerLink]="['my-listings']">My Listings</a>
+        <a class="link" [routerLink]="['all-listings']">All Listings</a>
+    </div>
+    <div class="nav-right desktop-nav">
+        <a class="btn" (click)="onLogoff()">Log Out</a>
+    </div>
+    <!-- Mobile navigation dropdown -->
+    <div class="mobile-nav" [class.active]="isMobileMenuOpen">
+        <div class="mobile-nav-content">
+            <a class="mobile-link" [routerLink]="['dashboard']" (click)="toggleMobileMenu()">Dashboard</a>
+            <a class="mobile-link" [routerLink]="['my-listings']" (click)="toggleMobileMenu()">My Listings</a>
+            <a class="mobile-link" [routerLink]="['all-listings']" (click)="toggleMobileMenu()">All Listings</a>
+            <a class="mobile-btn" (click)="onLogoff(); toggleMobileMenu()">Log Out</a>
+        </div>
+    </div>
+</div>

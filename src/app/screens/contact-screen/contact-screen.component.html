@@ -1,0 +1,81 @@
+<navbar></navbar>
+<div class="contact-container">
+    <!-- Contact Form Section -->
+    <div class="form-section">
+        <h1 class="heading">Get in Touch</h1>
+        <p class="subheading">We'd love to hear from you. Send us a message and we'll respond as soon as possible.</p>
+        
+        <form class="contact-form" (ngSubmit)="onSubmit()" #contactForm="ngForm">
+            <div class="form-group">
+                <div class="input-group">
+                    <input type="text" id="name" name="name" [(ngModel)]="formData.name" required placeholder="Your Name">
+                    <i class='bx bx-user'></i>
+                </div>
+                <div class="input-group">
+                    <input type="email" id="email" name="email" [(ngModel)]="formData.email" required placeholder="Your Email">
+                    <i class='bx bx-envelope'></i>
+                </div>
+            </div>
+            
+            <div class="input-group">
+                <input type="text" id="subject" name="subject" [(ngModel)]="formData.subject" required placeholder="Subject">
+                <i class='bx bx-chat'></i>
+            </div>
+            
+            <div class="input-group">
+                <textarea id="message" name="message" [(ngModel)]="formData.message" required placeholder="Your Message" rows="5"></textarea>
+                <i class='bx bx-message-detail'></i>
+            </div>
+            
+            <button type="submit" [disabled]="!contactForm.form.valid">
+                <span class="button-text">Send Message</span>
+                <i class='bx bx-send'></i>
+            </button>
+        </form>
+    </div>
+
+    <!-- Contact Details Section -->
+    <div class="details-section">
+        <div class="contact-card">
+            <div class="contact-info">
+                <h2>Contact Information</h2>
+                <p>Feel free to reach out to us through any of these channels</p>
+                
+                <div class="info-item">
+                    <i class='bx bx-envelope'></i>
+                    <div class="info-content">
+                        <h3>Email</h3>
+                        <p>support&#64;aptlyst.com</p>
+                        <p>info&#64;aptlyst.com</p>
+                    </div>
+                </div>
+                
+                <div class="info-item">
+                    <i class='bx bx-phone'></i>
+                    <div class="info-content">
+                        <h3>Phone</h3>
+                        <p>+91 7218147210</p>
+                    </div>
+                </div>
+                
+                <div class="info-item">
+                    <i class='bx bx-map'></i>
+                    <div class="info-content">
+                        <h3>Address</h3>
+                        <p>Hadapsar</p>
+                        <p>Pune,Maharashtra</p>
+                    </div>
+                </div>
+                
+                <div class="social-links">
+                    <a href="#" class="social-link"><i class='bx bxl-linkedin'></i></a>
+                    <a href="#" class="social-link"><i class='bx bxl-twitter'></i></a>
+                    <a href="#" class="social-link"><i class='bx bxl-facebook'></i></a>
+                    <a href="#" class="social-link"><i class='bx bxl-instagram'></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<app-footer></app-footer>

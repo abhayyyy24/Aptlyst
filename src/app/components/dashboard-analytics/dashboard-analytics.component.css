@@ -1,0 +1,92 @@
+.analytics-overview-wrapper {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  margin-top: 1rem;
+}
+
+/* Main card container */
+.analytics-overview {
+  width: 80%;
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  padding: 1.5rem;
+  outline: 1px solid #c4bebe;
+}
+
+/* Responsive: expand width on smaller screens */
+@media screen and (max-width: 768px) {
+  .analytics-overview {
+    width: 95%;
+  }
+}
+
+.analytics-header {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+  color: #252525;
+  background-color: #fff;
+  font-family: poppins, 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  
+}
+
+.analytics-header h3{
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: #252525;
+    margin-bottom: 1rem;
+    background-color: #fff;
+}
+
+.analytics-header i{
+    width: 30px;
+  height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #0469ff;
+    background-color: #f0f4ff;
+    border-radius: 50%;
+}
+
+.analytics-cards {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  background-color: #fff;
+}
+
+.analytics-card {
+  background-color: #f2f6ff;
+  flex: 1 ;
+  padding: 1rem;
+  border-radius: 10px;
+  text-align: flex-start;
+  min-width: 200px;
+  height: 100px;
+  padding-left: 2rem;
+
+}
+
+.analytics-card h4 {
+  margin: 0;
+  font-size: 1rem;
+  font-weight: 500;
+  color: #333;
+  background-color: inherit;
+  font-family: poppins, 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.analytics-card p {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-top: 0.5rem;
+  color: #0057ff;
+  background-color: inherit;
+  font-family: poppins, 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}

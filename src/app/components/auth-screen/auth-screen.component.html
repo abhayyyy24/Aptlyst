@@ -1,0 +1,131 @@
+<div class="auth-wrapper" [class.signup-mode]="!isLogin">
+  <div class="background">
+    <div class="blue-circle"></div>
+    <div class="blue-circle-2"></div>
+  </div>
+  
+  <div class="card">
+    <!-- Brand Section -->
+    <div class="brand-section">
+      <div class="brand-content">
+        <div class="logo-container">
+          <img src="/Logonbg.png" alt="Logo" />
+        </div>
+        <h1 class="brand-heading">Welcome to Aptlyst</h1>
+        <p class="brand-description">Your complete property management solution. List, manage, and grow your business with us.</p>
+      </div>
+      <div class="decoration">
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+      </div>
+    </div>
+
+    <!-- Forms Section -->
+    <div class="forms-section">
+      <!-- Error Message -->
+      <div class="error-message" *ngIf="errorMessage">
+        <i class='bx bx-error-circle'></i>
+        {{ errorMessage }}
+      </div>
+
+      <!-- Login Form -->
+      <div class="form login-form">
+        <div class="form-header">
+          <h2 class="heading">Sign in to Aptlyst</h2>
+          <p class="form-subtitle">Access your Aptlyst dashboard to manage your properties.</p>
+        </div>
+        
+        <form (ngSubmit)="onLogin()">
+          <div class="input-group">
+            <i class='bx bx-envelope'></i>
+            <input 
+              name="email" 
+              type="email" 
+              placeholder="Enter your email" 
+              [(ngModel)]="loginForm.email"
+              required
+            />
+          </div>
+          <div class="input-group">
+            <i class='bx bx-lock-alt'></i>
+            <input 
+              name="password" 
+              type="password" 
+              placeholder="Enter your password" 
+              [(ngModel)]="loginForm.password"
+              required
+            />
+          </div>
+          <button type="submit" class="submit-btn">
+            <span class='btn-text'>Sign In</span>
+            <i [class]="isLoading ? 'bx bx-loader-alt bx-spin' : 'bx bx-right-arrow-alt'"></i>
+          </button>
+        </form>
+        
+        <div class="form-footer">
+          <p class="switch-form">New to Aptlyst? <span class="toogle-text" (click)="toggleForm()">Create an account</span></p>
+        </div>
+      </div>
+
+      <!-- Signup Form -->
+      <div class="form signup-form">
+        <div class="form-header">
+          <h2 class="heading">Create Account</h2>
+          <p class="form-subtitle">Start your property management journey with Aptlyst</p>
+        </div>
+        
+        <form (ngSubmit)="onSignup()">
+          <div class="input-group">
+            <i class='bx bx-user'></i>
+            <input 
+              name="name" 
+              type="text" 
+              placeholder="Enter your full name" 
+              [(ngModel)]="signupForm.name"
+              required 
+            />
+          </div>
+          <div class="input-group">
+            <i class='bx bx-phone'></i>
+            <input 
+              name="phone" 
+              type="tel" 
+              placeholder="Enter your phone number" 
+              [(ngModel)]="signupForm.phone"
+              required 
+            />
+          </div>
+          <div class="input-group">
+            <i class='bx bx-envelope'></i>
+            <input 
+              name="email" 
+              type="email" 
+              placeholder="Enter your email" 
+              [(ngModel)]="signupForm.email"
+              required
+            />
+          </div>
+          <div class="input-group">
+            <i class='bx bx-lock-alt'></i>
+            <input 
+              name="password"  
+              type="password" 
+              placeholder="Create a password" 
+              [(ngModel)]="signupForm.password"
+              required
+            />
+          </div>
+          <button type="submit" class="submit-btn">
+            <span class='btn-text'>Create Account</span>
+            <i [class]="isLoading ? 'bx bx-loader-alt bx-spin' : 'bx bx-right-arrow-alt'"></i>
+          </button>
+        </form>
+        
+        <div class="form-footer">
+          <p class="switch-form">Already have an account? <span class="toogle-text" (click)="toggleForm()">Sign in</span></p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

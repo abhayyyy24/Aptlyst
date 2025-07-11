@@ -1,0 +1,117 @@
+.notifications-panel {
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  padding: 1rem 1rem;
+  flex: 1;
+  outline:1px solid #c4bebe;
+}
+
+.notifications-header {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  color: #252525;
+  background-color: #fff;
+  font-family: poppins, 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.notifications-header i{
+    width: 30px;
+   height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #0469ff;
+    background-color: #f0f4ff;
+    border-radius: 50%;
+}
+.notifications-header h3{
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: #252525;
+    margin-bottom: 1rem;
+    background-color: #fff;
+}
+
+.notifications-header i {
+  width: 30px;
+  height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #0469ff;
+    background-color: #f0f4ff;
+    border-radius: 50%;
+}
+
+.notification-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  margin-bottom: 1.5rem;
+  background-color: #fff;
+}
+
+.notification-item {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.75rem;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: #333;
+  background: #f6f8fa;
+  font-family: poppins ,'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.notification-item.info {
+  background-color: #e8f0ff;
+  color: #2962ff;
+}
+
+.notification-item.success {
+  background-color: #e6f9f0;
+  color: #2e7d32;
+}
+
+.notification-item.warning {
+  background-color: #fff3e0;
+  color: #ef6c00;
+}
+
+.view-all-btn {
+  width: 100%;
+  padding: 0.75rem;
+  background-color: #2979ff;
+  color: #ffffff;
+  border: none;
+  border-radius: 8px;
+  font-family: poppins, 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 0.95rem;
+  font-weight: 500;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.4rem;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.view-all-btn i{
+  background-color: inherit;
+  scale: 1.3;
+}
+
+.view-all-btn:hover {
+  background-color: #1c5de7;
+}
+
+.notifications-panel {
+  flex: 1;
+  min-width: 280px; /* ensures they don't get too small */
+}

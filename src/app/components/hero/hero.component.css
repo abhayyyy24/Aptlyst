@@ -1,0 +1,77 @@
+.hero-section{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding-bottom: 2vh;
+}
+.text-1{
+    font-size:2.5rem;
+    font-weight: 600;
+    font-family: poppins;
+    color:#252525;
+}
+.text-2{
+    font-size: 1rem;
+    font-weight: 400;
+    color:#252525;
+    letter-spacing: 1px;
+    max-width: 70%;
+    font-family: 'Poppins',sans-serif;
+}
+
+.Btn-Container {
+  margin-top: 6vh;
+  display: flex;
+  height: fit-content;
+  background-color: #1d2129;
+  border-radius: 50px;
+  box-shadow: 0px 5px 10px #bebebe;
+  justify-content: space-between;
+  align-items: center;
+  border: none;
+  cursor: pointer;
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+.icon-Container {
+  width: 50px;
+  height: 50px;
+  background-color: #0469ff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  border: 3px solid #1d2129;
+  flex-shrink: 0;
+}
+.text {
+  padding:0 20px;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 1.1em;
+  letter-spacing: 1.2px;
+  background-color: #1d2129;
+  font-family: poppins;
+}
+.icon-Container svg {
+  transition-duration: 1.5s;
+  background-color: #0469ff;
+}
+.Btn-Container:hover .icon-Container svg {
+  transition-duration: 1.5s;
+  animation: arrow 1s linear infinite;
+}
+@keyframes arrow {
+  0% {
+    opacity: 0;
+    margin-left: 0px;
+  }
+  100% {
+    opacity: 1;
+    margin-left: 10px;
+  }
+}

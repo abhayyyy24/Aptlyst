@@ -1,0 +1,102 @@
+.groups-panel {
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  padding: 1rem 1rem;
+  flex: 1;
+  outline:1px solid #c4bebe;
+}
+.groups-header h3{
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #252525;
+    margin-bottom: 1rem;
+    background-color: #fff;
+    font-family: poppins,'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.groups-header i {
+  width: 30px;
+  height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #0469ff;
+    background-color: #f0f4ff;
+    border-radius: 50%;
+}
+
+.groups-header {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  color: #252525;
+  background-color: #fff;
+}
+
+.group-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  margin-bottom: 1.5rem;
+  background-color: #fff;
+}
+
+.group-item {
+  background: #f6f8fa;
+  padding: 0.75rem 1rem;
+  border-radius: 8px;
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: #333;
+  
+}
+
+.name{
+    background-color: inherit;
+    color:#252525;
+    font-family: poppins,'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.count{
+    background-color: inherit;
+    color: #0469ff;
+    font-family: 'poppins','Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.create-group-btn {
+  width: 100%;
+  padding: 0.75rem;
+  background-color: #2979ff;
+  color: #ffffff;
+  border: none;
+  border-radius: 8px;
+  font-family: poppins, 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 0.95rem;
+  font-weight: 500;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.4rem;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.create-group-btn i {
+  font-size: 1.2rem;
+  background-color: inherit;
+
+}
+
+.create-group-btn:hover {
+  background-color: #1c5de7;
+}
+
+.groups-panel {
+  flex: 1;
+  min-width: 280px; /* ensures they don't get too small */
+}

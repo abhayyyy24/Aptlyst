@@ -1,0 +1,27 @@
+<div class="groups-panel">
+  <div class="groups-header">
+    <i class='bx bx-folder'></i>
+    <h3>Groups</h3>
+  </div>
+
+  <div class="group-list">
+    <div class="group-item" *ngFor="let group of groups; let i = index">
+      <span class="name">{{ group.name }}</span>
+      <!-- Optionally, add more group info here -->
+      <span class="group-actions">
+        <button class="ellipsis-btn" (click)="toggleDropdown(i)" type="button">
+          <i class='bx bx-dots-horizontal-rounded'></i>
+        </button>
+        <div class="group-dropdown" *ngIf="openDropdownIndex === i">
+          <button (click)="leaveGroup(i)">Leave</button>
+          <button (click)="showSecretCode(i)">Secret Code</button>
+          <button (click)="shareGroup(i)">Share</button>
+        </div>
+      </span>
+    </div>
+  </div>
+
+  <button class="create-group-btn">
+    <i class='bx bx-plus'></i> Create New Group
+  </button>
+</div>

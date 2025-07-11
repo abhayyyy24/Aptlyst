@@ -1,0 +1,15 @@
+<div class="card" [class.popular]="isPopular">
+    <div class="icon">{{icon}}</div>
+    <h3>{{title}}</h3>
+    <p class="subtitle">{{subtitle}}</p>
+    <h1>${{price}}<span>/month</span></h1>
+
+    <ul class="features">
+        <li *ngFor="let feature of features">
+            {{feature}}
+        </li>
+    </ul>
+
+    <button routerLink="/sign">{{buttonText}}</button>
+    <span *ngIf="isPopular" class="badge">Popular</span>
+</div>
